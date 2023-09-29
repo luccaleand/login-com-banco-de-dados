@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar mode="ios">
+    <ion-title>
+      {{title}},
+      {{databind}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- <form action=""> -->
+  <form #ChamaoVar="ngForm" (ngSubmit)="Metodozinho(ChamaoVar)">
+    <ion-item>
+      <ion-label>Nome: </ion-label>
+      <ion-input type="text" placeholder="Insira seu nome" name="caquiN" ngModel></ion-input>
+    </ion-item>
+
+    <!--     <ion-item lines="none"> -->
+    <ion-item>
+      <ion-label>Email: </ion-label>
+      <ion-input type="email" placeholder="email@provedor.com" name="caquiE" ngModel email="true"></ion-input>
+    </ion-item>
+
+    <ion-button type="Submit" expand="block">Enviar</ion-button>
+  
+
+
+  </form>
+  <!--
+       <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-explore-container name="Tab 1 page"></app-explore-container>
+ -->
+</ion-content>
